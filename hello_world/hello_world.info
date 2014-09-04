@@ -1,0 +1,15 @@
+name = hello_world
+description = Hello World
+core = 7.x
+package = Features
+version = 7.x-1.0
+project = hello_world
+dependencies[] = ctools
+dependencies[] = fe_block
+dependencies[] = views
+features[ctools][] = views:views_default:3.0
+features[fe_block_boxes][] = hello_world_content_here
+features[fe_block_settings][] = block-hello_world_content_here
+features[fe_block_settings][] = views-hello_world_nodes-block
+features[features_api][] = api:2
+features[views_view][] = hello_world_nodes
