@@ -22,6 +22,7 @@ function hello_world_views_default_views() {
 
   /* Display: Master */
   $handler = $view->new_display('default', 'Master', 'default');
+  $handler->display->display_options['title'] = 'Hello World!';
   $handler->display->display_options['use_more_always'] = FALSE;
   $handler->display->display_options['access']['type'] = 'perm';
   $handler->display->display_options['cache']['type'] = 'none';
@@ -30,12 +31,6 @@ function hello_world_views_default_views() {
   $handler->display->display_options['pager']['type'] = 'none';
   $handler->display->display_options['style_plugin'] = 'default';
   $handler->display->display_options['row_plugin'] = 'fields';
-  /* Header: Global: Text area */
-  $handler->display->display_options['header']['area']['id'] = 'area';
-  $handler->display->display_options['header']['area']['table'] = 'views';
-  $handler->display->display_options['header']['area']['field'] = 'area';
-  $handler->display->display_options['header']['area']['content'] = '<h2 class="block-title" style="font-weight: bold;">Hello World!</h2>';
-  $handler->display->display_options['header']['area']['format'] = 'full_html';
   /* Relationship: Content: Sections (field_sections) */
   $handler->display->display_options['relationships']['field_sections_tid']['id'] = 'field_sections_tid';
   $handler->display->display_options['relationships']['field_sections_tid']['table'] = 'field_data_field_sections';
