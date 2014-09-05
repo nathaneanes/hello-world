@@ -8,10 +8,9 @@ to store settings for a view output as a block. It also implements hook_node_vie
 The view (hello_world_nodes) shows all nodes of hello_world_article node type
 which have taxonomy terms from the 'Sections' vocabulary, as long as the selected
 terms have their 'enabled' box checked. This view is output as a block and
-assigned to the right sidebar. Instead of a conventional block title, which is
-not bold by default in the Bartik theme, the view has a header area with inline
-styles. Generally, I would avoid this method by using CSS in a custom theme if
-the block title needed to be bold. 
+assigned to the right sidebar. Since the sidebar h2 tag is not bold by default
+in the Bartik theme, I added a drupal_add_css() to hook_node_view() to force the
+bold styling.
 
 This part of the functionality could also have been accomplished by manually
 creating a block within the module, using the block hooks, which means this module
